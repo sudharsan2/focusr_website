@@ -25,6 +25,5 @@ def send_email_on_new_object(sender, instance, created, **kwargs):
 
         # Send the email
         send_mail(subject, message, 'sudharsanmac02@gmai.com', [to_email])
-        time.sleep(3)
         send_mail(subject, message1, 'sudharsanmac02@gmai.com', [to_email])
 
