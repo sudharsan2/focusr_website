@@ -129,4 +129,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'sudharsanmac02@gmail.com'  # Used for authentication with the email server
-EMAIL_HOST_PASSWORD = 'rrbi zjep yjjk czjh'
+EMAIL_HOST_PASSWORD = 'tiqm yewr qamk krlk'
