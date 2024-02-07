@@ -14,7 +14,7 @@ def send_email_on_new_object(sender, instance, created, **kwargs):
         # Send email when a new object is created
         subject = 'New Object Added'
         message = f"New object added with the following details:\n\n"
-        message+= f"name: {instance.full_Name}"
+        message+= f"name: {instance.full_Name}\n"
         message += f"email id: {instance.email}\n"
         message += f"about: {instance.about}\n"
         # Add more fields as needed
@@ -25,5 +25,5 @@ def send_email_on_new_object(sender, instance, created, **kwargs):
 
         # Send the email
         send_mail(subject, message, 'sudharsanmac02@gmai.com', [to_email])
-        send_mail(subject, message1, 'sudharsanmac02@gmai.com', [to_email])
+        send_mail(subject, message1, 'sudharsanmac02@gmai.com', [email_ad])
 
