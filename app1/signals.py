@@ -5,7 +5,7 @@ from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.contrib.auth.models import User  
 from django.conf import settings
-from .models import enquery
+from .models import enquery,apply
 import time
 
 @receiver(post_save, sender=enquery)
@@ -22,6 +22,30 @@ def send_email_on_new_object(sender, instance, created, **kwargs):
         message1= 'you enquery has been sent to our Team'
 
         to_email = 'sudharsanselvam2@gmail.com'  # replace with the recipient's email address
+
+        # Send the email
+        send_mail(subject, message, 'sudharsanmac02@gmai.com', [to_email])
+        send_mail(subject, message1, 'sudharsanmac02@gmai.com', [email_ad])
+
+
+@receiver(post_save, sender=apply)
+def send_email_on_new_object(sender, instance, created, **kwargs):
+    if created:
+        # Send email when a new object is created
+        subject = 'New Object Added'
+        message = f"New object added with the following details:\n\n"
+        message+= f"name: {instance.first_Name} {instance.last_Name}\n"
+        message += f"email id: {instance.email}\n"
+        message += f"about: {instance.mobile}\n" 
+        message += f"about: {instance.notice_Period}\n" 
+        message += f"about: {instance.years_Of_Experience}\n" 
+        message += f"about: {instance.skills}\n" 
+        
+        # Add more fields as needed
+        email_ad = instance.email
+        message1= 'you enquery has been sent to our Team'
+
+        to_email = 'sudharsan.selvam@focusrtech.com'  # replace with the recipient's email address
 
         # Send the email
         send_mail(subject, message, 'sudharsanmac02@gmai.com', [to_email])
