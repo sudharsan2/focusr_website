@@ -20,6 +20,7 @@ class apply(models.Model):
     notice_Period = models.TextField()
     years_Of_Experience = models.CharField(max_length = 20)
     skills = models.TextField()
+    applied_Role = models.CharField(max_length = 100, null= True)
     
     def __str__(self):
         return self.first_Name

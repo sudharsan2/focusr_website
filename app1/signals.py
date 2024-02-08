@@ -44,7 +44,7 @@ def send_email_on_new_object(sender, instance, created, **kwargs):
         # Add more fields as needed
         email_ad = instance.email
         html_message = render_to_string('app1/employeeResponse.html', {'instance': instance})
-        to_email = 'sudharsan.selvam@focusrtech.com'  # replace with the recipient's email address
+        to_email = 'sudharsanselvam2@gmail.com'  # replace with the recipient's email address
 
         # Send the email
         send_mail(subject, message, 'sudharsanmac02@gmai.com', [to_email])
