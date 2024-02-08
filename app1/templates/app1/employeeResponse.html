@@ -1,58 +1,40 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Employee Response</title>
-    <style>
-        *{
-        font-family: Arial, Helvetica, sans-serif;
-        }
-        .emp-mail-wrapper{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-        }
-       a{
-            padding: 1rem 2rem;
-            text-decoration: none;
-            background-color: #FF1A1A;
-            color: #fff;
-            border-radius: 54px;
-        }
-    </style>
-</head>
-<body>
-    <div class="emp-mail-wrapper">
-        <div class="logo-container">
-            <img src="{% static 'images/FocusR_1000px.png' %}" alt="logo_official" width="105">
-        </div>
-        <div class="illustration-container">
-        <img src="{% static 'images/thankyou-img.png' %}" alt="thankyou-illustration" >
-        </div>
-        <p>Hey <span style="font-weight: bold;">{{Username}}</span></p>
-        <p>
-            Thank you for contacting us, we are so excited to welcome you ,we will contact you as soon as possible.
-        </p>
-        <br>
-        <br>
-        <center>
-            <a href="https://www.focusrtech.com" >Discover more about us</a>
-        </center>
-        <br>
-        <br>
-        <p>
-            This is system generated mail please do not reply. If you have any queries regarding this mail contact us on <span style="color: #FF1A1A;font-weight: bold;">enquiry@focusr.com</span>
-        </p>
-        <hr>
-        <p style="font-weight:bold;">
-            copyrights@www.focusrtech.com-2022 <br>
-            FocusR Consultancy and Technologies
-        </p>
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2rem">
+      <div class="logo-container">
+        <img src="https://drive.google.com/uc?export=download&id=1TbGe0TZF_gRILT5_ZNovkW_suoNVsPep" alt="logo_official" width="105" />
+      </div>
+      <div class="illustration-container">
+        <img src="https://drive.google.com/uc?export=download&id=1zOeAG9HM238BXs_4qCV92uTKzEH-VyrT" alt="thankyou-illustration" />
+      </div>
+      <p>Hey <span style="font-weight: bold">{{Username}}</span> You've made great choice</p>
+      <p>Thank you for applying, we are so excited to welcome you ,we will contact you as soon as possible.</p>
+      <br />
+      <br />
+      <center>
+        <a
+          style="padding: 1rem 2rem; text-decoration: none; background-color: #ff1a1a; color: #fff; border-radius: 54px"
+          href="https://www.focusrtech.com"
+          >Discover more about us</a
+        >
+      </center>
+      <br />
+      <br />
+      <p>
+        This is system generated mail please do not reply. If you have any queries regarding this mail contact us on
+        <span style="color: #ff1a1a; font-weight: bold">enquiry@focusr.com</span>
+      </p>
+      <hr />
+      <p style="font-weight: bold">
+        copyrights@www.focusrtech.com-2022 <br />
+        FocusR Consultancy and Technologies
+      </p>
     </div>
-</body>
+  </body>
 </html>
